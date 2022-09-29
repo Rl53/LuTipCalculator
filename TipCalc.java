@@ -5,7 +5,6 @@ public class TipCalc {
         DecimalFormat formatter = new DecimalFormat("#.##");
         Scanner scan = new Scanner(System.in);
         double totalCost =0;
-
         System.out.println("Welcome to the tip calculator!");
         System.out.println("How many people are in your group? ");
         int people = scan.nextInt();
@@ -23,7 +22,7 @@ public class TipCalc {
             cost = scan.nextDouble();
         }
 
-        double totalTip = (tip * 0.01) * totalCost;
+        String totalTip = formatter.format(((tip * 0.01) * totalCost));
         double tipBill = totalTip + totalCost;
         double personCost = totalCost / people;
         double personTip = totalTip / people;
